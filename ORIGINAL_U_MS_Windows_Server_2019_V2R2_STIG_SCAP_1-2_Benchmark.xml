@@ -2546,6 +2546,34 @@ Note: Organizations with domain controllers running earlier versions of Windows 
 
 
 
+<!-- 2.3.11.7 -->
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205919">
+        <xccdf:title>WN19-CIS_v1.0.1_2.3.11.7</xccdd:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205919r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CIS_v1.0.1_2.3.11.7</xccdf:version>
+          <xccdf:title>(L1) Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;The Kerberos v5 authentication protocol is the default for authentication of users who are logging on to domain accounts. NTLM, which is less secure, is retained in later Windows versions for compatibility with clients and servers that are running earlier versions of Windows or applications that still use it. It is also used to authenticate logons to standalone computers that are running later versions.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103389</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93301</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6184r356120_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "Network security: LAN Manager authentication level" to "Send NTLMv2 response only. Refuse LM &amp; NTLM".</xccdf:fixtext>
+          <xccdf:fix id="F-6184r356120_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2156" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+
+
       <xccdf:Group id="xccdf_mil.disa.stig_group_V-205920">
         <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
         <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
