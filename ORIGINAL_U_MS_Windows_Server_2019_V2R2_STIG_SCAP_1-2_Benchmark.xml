@@ -2928,6 +2928,78 @@ Satisfies: SRG-OS-000004-GPOS-00004, SRG-OS-000239-GPOS-00089, SRG-OS-000240-GPO
 
 
 
+<!-- 見直し -->
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205626">
+        <xccdf:title>SRG-OS-000004-GPOS-00004</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205626r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-AU-000110</xccdf:version>
+          <xccdf:title>17.2.6 (L1) Ensure 'Audit User Account Management' is set to 'Success' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
+
+User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+
+Satisfies: SRG-OS-000004-GPOS-00004, SRG-OS-000239-GPOS-00089, SRG-OS-000240-GPOS-00090, SRG-OS-000241-GPOS-00091, SRG-OS-000303-GPOS-00120, SRG-OS-000476-GPOS-00221&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103069</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-92981</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000018</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000172</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001403</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001404</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001405</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002130</xccdf:ident>
+          <xccdf:fixtext fixref="F-5891r354797_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Advanced Audit Policy Configuration &gt;&gt; System Audit Policies &gt;&gt; Account Management &gt;&gt; "Audit User Account Management" with "Success" selected.</xccdf:fixtext>
+          <xccdf:fix id="F-5891r354797_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2034" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205627">
+        <xccdf:title>SRG-OS-000004-GPOS-00004</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205627r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-AU-000120</xccdf:version>
+          <xccdf:title>17.2.6 (L1) Ensure 'Audit User Account Management' is set to 'Failure' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
+
+User Account Management records events such as creating, changing, deleting, renaming, disabling, or enabling user accounts.
+
+Satisfies: SRG-OS-000004-GPOS-00004, SRG-OS-000239-GPOS-00089, SRG-OS-000240-GPOS-00090, SRG-OS-000241-GPOS-00091, SRG-OS-000303-GPOS-00120, SRG-OS-000476-GPOS-00221&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103071</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-92983</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000018</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000172</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001403</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001404</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001405</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002130</xccdf:ident>
+          <xccdf:fixtext fixref="F-5892r354800_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Advanced Audit Policy Configuration &gt;&gt; System Audit Policies &gt;&gt; Account Management &gt;&gt; "Audit User Account Management" with "Failure" selected.</xccdf:fixtext>
+          <xccdf:fix id="F-5892r354800_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2035" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+
+
+
 
 
 
