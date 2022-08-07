@@ -2544,15 +2544,12 @@ Note: Organizations with domain controllers running earlier versions of Windows 
         </xccdf:Rule>
       </xccdf:Group>
 
-
-
-<!-- 2.3.11.7 -->
       <xccdf:Group id="xccdf_mil.disa.stig_group_V-205919">
-        <xccdf:title>WN19-CIS_v1.0.1_2.3.11.7</xccdd:title>
+        <xccdf:title>WN19-CIS_v1.0.1_2.3.11.7</xccdf:title>
         <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
         <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205919r569188_rule" weight="10.0" severity="high">
           <xccdf:version update="http://iase.disa.mil/stigs">WN19-CIS_v1.0.1_2.3.11.7</xccdf:version>
-          <xccdf:title>(L1) Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM & NTLM' (Automated)</xccdf:title>
+          <xccdf:title>(L1) Ensure 'Network security: LAN Manager authentication level' is set to 'Send NTLMv2 response only. Refuse LM &amp; NTLM' (Automated)</xccdf:title>
           <xccdf:description>&lt;VulnDiscussion&gt;The Kerberos v5 authentication protocol is the default for authentication of users who are logging on to domain accounts. NTLM, which is less secure, is retained in later Windows versions for compatibility with clients and servers that are running earlier versions of Windows or applications that still use it. It is also used to authenticate logons to standalone computers that are running later versions.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
           <xccdf:reference>
             <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
@@ -2571,8 +2568,6 @@ Note: Organizations with domain controllers running earlier versions of Windows 
           </xccdf:check>
         </xccdf:Rule>
       </xccdf:Group>
-
-
 
       <xccdf:Group id="xccdf_mil.disa.stig_group_V-205920">
         <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
@@ -2728,7 +2723,82 @@ The more secure option for this setting, "Prompt for credentials on the secure d
         </xccdf:Rule>
       </xccdf:Group>
 
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205812">
+        <xccdf:title>SRG-OS-000373-GPOS-00157</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205812r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-SO-000410</xccdf:version>
+          <xccdf:title>2.3.17.3 (L1) Ensure 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;User Account Control (UAC) is a security mechanism for limiting the elevation of privileges, including administrative accounts, unless authorized. This setting controls the behavior of elevation when requested by a standard user account.
 
+Satisfies: SRG-OS-000373-GPOS-00157, SRG-OS-000373-GPOS-00156&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93433</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103519</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002038</xccdf:ident>
+          <xccdf:fixtext fixref="F-6077r355799_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "User Account Control: Behavior of the elevation prompt for standard users" to "Automatically deny elevation requests".</xccdf:fixtext>
+          <xccdf:fix id="F-6077r355799_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2166" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205718">
+        <xccdf:title>SRG-OS-000134-GPOS-00068</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205718r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-SO-000420</xccdf:version>
+          <xccdf:title>2.3.17.4 (L1) Ensure 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;User Account Control (UAC) is a security mechanism for limiting the elevation of privileges, including administrative accounts, unless authorized. This setting requires Windows to respond to application installation requests by prompting for credentials.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103611</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93525</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001084</xccdf:ident>
+          <xccdf:fixtext fixref="F-5983r355073_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "User Account Control: Detect application installations and prompt for elevation" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5983r355073_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2167" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205719">
+        <xccdf:title>SRG-OS-000134-GPOS-00068</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205719r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-SO-000430</xccdf:version>
+          <xccdf:title>W2.3.17.5 (L1) Ensure 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;UAC is a security mechanism for limiting the elevation of privileges, including administrative accounts, unless authorized. This setting configures Windows to only allow applications installed in a secure location on the file system, such as the Program Files or the Windows\System32 folders, to run with elevated privileges.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93527</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103613</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001084</xccdf:ident>
+          <xccdf:fixtext fixref="F-5984r355076_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "User Account Control: Only elevate UIAccess applications that are installed in secure locations" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5984r355076_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2168" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
 
 
 
