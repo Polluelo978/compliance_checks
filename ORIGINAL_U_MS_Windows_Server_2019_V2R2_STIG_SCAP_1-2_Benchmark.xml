@@ -2125,6 +2125,33 @@ Satisfies: SRG-OS-000028-GPOS-00009, SRG-OS-000029-GPOS-00010, SRG-OS-000031-GPO
         </xccdf:Rule>
       </xccdf:Group>
 
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205828">
+        <xccdf:title>WN19-CIS_v1.0.1_2.3.8.1</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205828r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CIS_v1.0.1_2.3.8.1</xccdf:version>
+          <xccdf:title>(L1) Ensure 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;The server message block (SMB) protocol provides the basis for many network operations. Digitally signed SMB packets aid in preventing man-in-the-middle attacks. If this policy is enabled, the SMB server will negotiate SMB packet signing as requested by the client.
+
+Satisfies: SRG-OS-000423-GPOS-00187, SRG-OS-000424-GPOS-00188&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93561</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103647</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002418</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002421</xccdf:ident>
+          <xccdf:fixtext fixref="F-6093r355847_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; Security Options &gt;&gt; "Microsoft network server: Digitally sign communications (if client agrees)" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6093r355847_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2145" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
 
 
 
@@ -2138,7 +2165,7 @@ Satisfies: SRG-OS-000028-GPOS-00009, SRG-OS-000029-GPOS-00010, SRG-OS-000031-GPO
 
 
 
->
+
 
       <xccdf:Group id="xccdf_mil.disa.stig_group_V-205832">
         <xccdf:title>WN19-CIS_v1.0.1_17.1.1</xccdf:title>
