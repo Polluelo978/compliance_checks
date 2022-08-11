@@ -3646,7 +3646,35 @@ Satisfies: SRG-OS-000327-GPOS-00127, SRG-OS-000471-GPOS-00215, SRG-OS-000471-GPO
         </xccdf:Rule>
       </xccdf:Group>
 
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205715">
+        <xccdf:title>SRG-OS-000134-GPOS-00068</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205715r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-MS-000020</xccdf:version>
+          <xccdf:title>18.3.1 (L1) Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' (MS only) (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;A compromised local administrator account can provide means for an attacker to move laterally between domain systems.
 
+With User Account Control enabled, filtering the privileged token for local administrator accounts will prevent the elevated privileges of these accounts from being used over the network.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:platform idref="#xccdf_mil.disa.stig_platform_Windows_Server_2019_MS" />
+          <xccdf:ident system="http://cyber.mil/legacy">V-93519</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103605</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001084</xccdf:ident>
+          <xccdf:fixtext fixref="F-5980r355064_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; MS Security Guide &gt;&gt; "Apply UAC restrictions to local accounts on network logons" to "Enabled".
+
+This policy setting requires the installation of the SecGuide custom templates included with the STIG package. "SecGuide.admx" and " SecGuide.adml" must be copied to the \Windows\PolicyDefinitions and \Windows\PolicyDefinitions\en-US directories respectively.</xccdf:fixtext>
+          <xccdf:fix id="F-5980r355064_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2115" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
 
 
 
