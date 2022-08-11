@@ -4192,6 +4192,766 @@ This setting prevents the computer from downloading print driver packages over H
         </xccdf:Rule>
       </xccdf:Group>
 
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205805">
+        <xccdf:title>SRG-OS-000368-GPOS-00154</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205805r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000220</xccdf:version>
+          <xccdf:title>18.9.8.2 (L1) Ensure 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Allowing AutoRun commands to execute may introduce malicious code to a system. Configuring this setting prevents AutoRun commands from executing.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93375</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103461</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001764</xccdf:ident>
+          <xccdf:fixtext fixref="F-6070r355778_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; AutoPlay Policies &gt;&gt; "Set the default behavior for AutoRun" to "Enabled" with "Do not execute any autorun commands" selected.</xccdf:fixtext>
+          <xccdf:fix id="F-6070r355778_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_default_behavior_for_autorun_var" export-name="oval:mil.disa.stig.windows:var:109800" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2065" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205806">
+        <xccdf:title>SRG-OS-000368-GPOS-00154</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205806r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000230</xccdf:version>
+          <xccdf:title>18.9.8.3 (L1) Ensure 'Turn off Autoplay' is set to 'Enabled: All drives' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Allowing AutoPlay to execute may introduce malicious code to a system. AutoPlay begins reading from a drive as soon media is inserted into the drive. As a result, the setup file of programs or music on audio media may start. By default, AutoPlay is disabled on removable drives, such as the floppy disk drive (but not the CD-ROM drive) and on network drives. Enabling this policy disables AutoPlay on all drives.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93377</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103463</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001764</xccdf:ident>
+          <xccdf:fixtext fixref="F-6071r355781_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; AutoPlay Policies &gt;&gt; "Turn off AutoPlay" to "Enabled" with "All Drives" selected.</xccdf:fixtext>
+          <xccdf:fix id="F-6071r355781_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2066" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205804">
+        <xccdf:title>SRG-OS-000368-GPOS-00154</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205804r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000210</xccdf:version>
+          <xccdf:title>18.9.8.1 (L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Allowing AutoPlay to execute may introduce malicious code to a system. AutoPlay begins reading from a drive as soon as media is inserted into the drive. As a result, the setup file of programs or music on audio media may start. This setting will disable AutoPlay for non-volume devices, such as Media Transfer Protocol (MTP) devices.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93373</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103459</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001764</xccdf:ident>
+          <xccdf:fixtext fixref="F-6069r355775_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; AutoPlay Policies &gt;&gt; "Disallow Autoplay for non-volume devices" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6069r355775_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_turn_off_autoplay_for_non_volume_devices_var" export-name="oval:mil.disa.stig.windows:var:109700" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2064" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205714">
+        <xccdf:title>SRG-OS-000134-GPOS-00068</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205714r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000240</xccdf:version>
+          <xccdf:title>18.9.15.2 (L1) Ensure 'Enumerate administrator accounts on elevation' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Enumeration of administrator accounts when elevating can provide part of the logon information to an unauthorized user. This setting configures the system to always require users to type in a username and password to elevate a running application.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93517</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103603</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001084</xccdf:ident>
+          <xccdf:fixtext fixref="F-5979r355061_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Credential User Interface &gt;&gt; "Enumerate administrator accounts on elevation" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5979r355061_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_enumerate_administrator_accounts_on_elevation_var" export-name="oval:mil.disa.stig.windows:var:110400" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2070" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205869">
+        <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205869r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000250</xccdf:version>
+          <xccdf:title>18.9.16.1 (L1) Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]' or 'Enabled: 1 - Basic' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Some features may communicate with the vendor, sending system information or downloading data or components for the feature. Limiting this capability will prevent potentially sensitive information from being sent outside the enterprise. The "Security" option for Telemetry configures the lowest amount of data, effectively none outside of the Malicious Software Removal Tool (MSRT), Defender, and telemetry client settings. "Basic" sends basic diagnostic and usage data and may be required to support some Microsoft services.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103345</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93257</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6134r355970_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Data Collection and Preview Builds&gt;&gt; "Allow Telemetry" to "Enabled" with "0 - Security [Enterprise Only]" or "1 - Basic" selected in "Options".</xccdf:fixtext>
+          <xccdf:fix id="F-6134r355970_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2213" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+
+
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205796">
+        <xccdf:title>SRG-OS-000341-GPOS-00132</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205796r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000270</xccdf:version>
+          <xccdf:title>18.9.26.1.2 (L1) Ensure 'Application: Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Inadequate log size will cause the log to fill up quickly. This may prevent audit events from being recorded properly and require frequent attention by administrative personnel.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103265</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93177</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001849</xccdf:ident>
+          <xccdf:fixtext fixref="F-6061r355751_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Event Log Service &gt;&gt; Application &gt;&gt; "Specify the maximum log file size (KB)" to "Enabled" with a "Maximum Log Size (KB)" of "32768" or greater.</xccdf:fixtext>
+          <xccdf:fix id="F-6061r355751_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_maximum_application_log_size_var" export-name="oval:mil.disa.stig.windows:var:110500" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2071" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205797">
+        <xccdf:title>SRG-OS-000341-GPOS-00132</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205797r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000280</xccdf:version>
+          <xccdf:title>18.9.26.2.2 (L1) Ensure 'Security: Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Inadequate log size will cause the log to fill up quickly. This may prevent audit events from being recorded properly and require frequent attention by administrative personnel.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103267</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93179</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001849</xccdf:ident>
+          <xccdf:fixtext fixref="F-6062r355754_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Event Log Service &gt;&gt; Security &gt;&gt; "Specify the maximum log file size (KB)" to "Enabled" with a "Maximum Log Size (KB)" of "196608" or greater.</xccdf:fixtext>
+          <xccdf:fix id="F-6062r355754_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_maximum_security_log_size_var" export-name="oval:mil.disa.stig.windows:var:110600" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2072" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205872">
+        <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205872r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000330</xccdf:version>
+          <xccdf:title>18.9.30.4 (L1) Ensure 'Turn off shell protocol protected mode' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;The shell protocol will limit the set of folders that applications can open when run in protected mode. Restricting files an application can open to a limited set of folders increases the security of Windows.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93263</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103351</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6137r355979_fix">The default behavior is for shell protected mode to be turned on for File Explorer.
+
+If this needs to be corrected, configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; File Explorer &gt;&gt; "Turn off shell protocol protected mode" to "Not Configured" or "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6137r355979_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_turn_off_shell_protocol_protected_mode_var" export-name="oval:mil.disa.stig.windows:var:111100" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2077" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205830">
+        <xccdf:title>SRG-OS-000433-GPOS-00192</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205830r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000310</xccdf:version>
+          <xccdf:title>18.9.30.2 (L1) Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Data Execution Prevention provides additional protection by performing checks on memory to help prevent malicious code from running. This setting will prevent Data Execution Prevention from being turned off for File Explorer.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103649</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93563</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002824</xccdf:ident>
+          <xccdf:fixtext fixref="F-6095r355853_fix">The default behavior is for data execution prevention to be turned on for File Explorer.
+
+If this needs to be corrected, configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; File Explorer &gt;&gt; "Turn off Data Execution Prevention for Explorer" to "Not Configured" or "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6095r355853_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_turn_off_data_execution_prevention_for_explorer_var" export-name="oval:mil.disa.stig.windows:var:110900" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2075" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205808">
+        <xccdf:title>SRG-OS-000373-GPOS-00157</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205808r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000340</xccdf:version>
+          <xccdf:title>18.9.62.2.2 (L1) Ensure 'Do not allow passwords to be saved' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Saving passwords in the Remote Desktop Client could allow an unauthorized user to establish a remote desktop session to another system. The system must be configured to prevent users from saving passwords in the Remote Desktop Client.
+
+Satisfies: SRG-OS-000373-GPOS-00157, SRG-OS-000373-GPOS-00156&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93425</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103511</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002038</xccdf:ident>
+          <xccdf:fixtext fixref="F-6073r355787_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Remote Desktop Services &gt;&gt; Remote Desktop Connection Client &gt;&gt; "Do not allow passwords to be saved" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6073r355787_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_do_not_allow_passwords_to_be_saved_var" export-name="oval:mil.disa.stig.windows:var:111200" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2078" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205722">
+        <xccdf:title>SRG-OS-000138-GPOS-00069</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205722r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000350</xccdf:version>
+          <xccdf:title>18.9.62.3.3.2 (L1) Ensure 'Do not allow drive redirection' is set t o 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Preventing users from sharing the local drives on their client computers with Remote Session Hosts that they access helps reduce possible exposure of sensitive data.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103619</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93533</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001090</xccdf:ident>
+          <xccdf:fixtext fixref="F-5987r355085_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Remote Desktop Services &gt;&gt; Remote Desktop Session Host &gt;&gt; Device and Resource Redirection &gt;&gt; "Do not allow drive redirection" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5987r355085_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_do_not_allow_drive_redirection_var" export-name="oval:mil.disa.stig.windows:var:111300" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2079" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205809">
+        <xccdf:title>SRG-OS-000373-GPOS-00157</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205809r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000360</xccdf:version>
+          <xccdf:title>18.9.62.3.9.1 (L1) Ensure 'Always prompt for password upon connection' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;This setting controls the ability of users to supply passwords automatically as part of their remote desktop connection. Disabling this setting would allow anyone to use the stored credentials in a connection item to connect to the terminal server.
+
+Satisfies: SRG-OS-000373-GPOS-00157, SRG-OS-000373-GPOS-00156&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93427</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103513</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002038</xccdf:ident>
+          <xccdf:fixtext fixref="F-6074r355790_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Remote Desktop Services &gt;&gt; Remote Desktop Session Host &gt;&gt; Security &gt;&gt; "Always prompt for password upon connection" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6074r355790_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_always_prompt_for_password_upon_connection_var" export-name="oval:mil.disa.stig.windows:var:111400" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2080" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205636">
+        <xccdf:title>SRG-OS-000033-GPOS-00014</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205636r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000370</xccdf:version>
+          <xccdf:title>18.9.62.3.9.2 (L1) Ensure 'Require secure RPC communication' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Allowing unsecure RPC communication exposes the system to man-in-the-middle attacks and data disclosure attacks. A man-in-the-middle attack occurs when an intruder captures packets between a client and server and modifies them before allowing the packets to be exchanged. Usually the attacker will modify the information in the packets in an attempt to cause either the client or server to reveal sensitive information.
+
+Satisfies: SRG-OS-000033-GPOS-00014, SRG-OS-000250-GPOS-00093&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-92971</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103059</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000068</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001453</xccdf:ident>
+          <xccdf:fixtext fixref="F-5901r354827_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Remote Desktop Services &gt;&gt; Remote Desktop Session Host &gt;&gt; Security &gt;&gt; "Require secure RPC communication" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5901r354827_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_require_secure_rpc_communication_var" export-name="oval:mil.disa.stig.windows:var:111500" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2081" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205637">
+        <xccdf:title>SRG-OS-000033-GPOS-00014</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205637r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000380</xccdf:version>
+          <xccdf:title>18.9.62.3.9.5 (L1) Ensure 'Set client connection encryption level' is set to 'Enabled: High Level' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Remote connections must be encrypted to prevent interception of data or sensitive information. Selecting "High Level" will ensure encryption of Remote Desktop Services sessions in both directions.
+
+Satisfies: SRG-OS-000033-GPOS-00014, SRG-OS-000250-GPOS-00093&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-92973</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103061</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000068</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001453</xccdf:ident>
+          <xccdf:fixtext fixref="F-5902r354830_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Remote Desktop Services &gt;&gt; Remote Desktop Session Host &gt;&gt; Security &gt;&gt; "Set client connection encryption level" to "Enabled" with "High Level" selected.</xccdf:fixtext>
+          <xccdf:fix id="F-5902r354830_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_set_client_connection_encryption_level_var" export-name="oval:mil.disa.stig.windows:var:111600" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2082" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205873">
+        <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205873r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000390</xccdf:version>
+          <xccdf:title>18.9.63.1 (L1) Ensure 'Prevent downloading of enclosures' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Attachments from RSS feeds may not be secure. This setting will prevent attachments from being downloaded from RSS feeds.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93265</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103353</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6138r355982_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; RSS Feeds &gt;&gt; "Prevent downloading of enclosures" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6138r355982_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_prevent_downloading_of_enclosures_var" export-name="oval:mil.disa.stig.windows:var:111700" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2083" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205694">
+        <xccdf:title>SRG-OS-000095-GPOS-00049</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205694r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000410</xccdf:version>
+          <xccdf:title>18.9.64.3 (L1) Ensure 'Allow indexing of encrypted files' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Indexing of encrypted files may expose sensitive data. This setting prevents encrypted files from being indexed.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93415</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103501</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000381</xccdf:ident>
+          <xccdf:fixtext fixref="F-5959r355001_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Search &gt;&gt; "Allow indexing of encrypted files" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5959r355001_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2197" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205692">
+        <xccdf:title>SRG-OS-000095-GPOS-00049</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205692r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000300</xccdf:version>
+          <xccdf:title>18.9.80.1.1 (L1) Ensure 'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Windows Defender SmartScreen helps protect systems from programs downloaded from the internet that may be malicious. Enabling SmartScreen can block potentially malicious programs or warn users.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93411</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103497</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000381</xccdf:ident>
+          <xccdf:fixtext fixref="F-5957r354995_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; File Explorer &gt;&gt; "Configure Windows Defender SmartScreen" to "Enabled" with either option "Warn" or "Warn and prevent bypass" selected.
+
+Windows 2019 includes duplicate policies for this setting. It can also be configured under Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Defender SmartScreen &gt;&gt; Explorer.</xccdf:fixtext>
+          <xccdf:fix id="F-5957r354995_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2074" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205802">
+        <xccdf:title>SRG-OS-000362-GPOS-00149</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205802r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000430</xccdf:version>
+          <xccdf:title>18.9.85.2 (L1) Ensure 'Always install with elevated privileges' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Standard user accounts must not be granted elevated privileges. Enabling Windows Installer to elevate privileges when installing applications can allow malicious persons and applications to gain full control of a system.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93201</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103289</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001812</xccdf:ident>
+          <xccdf:fixtext fixref="F-6067r355769_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Installer &gt;&gt; "Always install with elevated privileges" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6067r355769_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2086" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205801">
+        <xccdf:title>SRG-OS-000362-GPOS-00149</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205801r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000420</xccdf:version>
+          <xccdf:title>18.9.85.1 (L1) Ensure 'Allow user control over installs' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Installation options for applications are typically controlled by administrators. This setting prevents users from changing installation options that may bypass security features.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93199</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103287</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-001812</xccdf:ident>
+          <xccdf:fixtext fixref="F-6066r355766_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Installer &gt;&gt; "Allow user control over installs" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6066r355766_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_allow_user_control_over_installs_var" export-name="oval:mil.disa.stig.windows:var:111900" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2085" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205874">
+        <xccdf:title>SRG-OS-000480-GPOS-00227</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205874r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000440</xccdf:version>
+          <xccdf:title>18.9.85.3 (L2) Ensure 'Prevent Internet Explorer security prompt for Windows Installer scripts' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Web-based programs may attempt to install malicious software on a system. Ensuring users are notified if a web-based program attempts to install software allows them to refuse the installation.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103355</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93267</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6139r355985_fix">The default behavior is for Internet Explorer to warn users and select whether to allow or refuse installation when a web-based program attempts to install software on the system.
+
+If this needs to be corrected, configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Installer &gt;&gt; "Prevent Internet Explorer security prompt for Windows Installer scripts" to "Not Configured" or "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6139r355985_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_prevent_internet_explorer_security_prompt_for_windows_installer_scripts_var" export-name="oval:mil.disa.stig.windows:var:112100" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2087" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205925">
+        <xccdf:title>SRG-OS-000480-GPOS-00229</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205925r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000450</xccdf:version>
+          <xccdf:title>18.9.86.1 (L1) Ensure 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Windows can be configured to automatically sign the user back in after a Windows Update restart. Some protections are in place to help ensure this is done in a secure fashion; however, disabling this will prevent the caching of credentials for this purpose and also ensure the user is aware of the restart.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103357</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93269</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000366</xccdf:ident>
+          <xccdf:fixtext fixref="F-6190r356138_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Logon Options &gt;&gt; "Sign-in last interactive user automatically after a system-initiated restart" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6190r356138_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2214" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205639">
+        <xccdf:title>SRG-OS-000042-GPOS-00020</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205639r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000460</xccdf:version>
+          <xccdf:title>18.9.95.1 (L1) Ensure 'Turn on PowerShell Script Block Logging' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Maintaining an audit trail of system activity logs can help identify configuration errors, troubleshoot service disruptions, and analyze compromises that have occurred, as well as detect attacks. Audit logs are necessary to provide a trail of evidence in case the system or network is compromised. Collecting this data is essential for analyzing the security of information assets and detecting signs of suspicious and unexpected behavior.
+
+Enabling PowerShell script block logging will record detailed information from the processing of PowerShell commands and scripts. This can provide additional detail when malware has run on a system.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103263</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93175</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000135</xccdf:ident>
+          <xccdf:fixtext fixref="F-5904r354836_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows PowerShell &gt;&gt; "Turn on PowerShell Script Block Logging" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5904r354836_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2209" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+
+
+
+
+
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205711">
+        <xccdf:title>SRG-OS-000125-GPOS-00065</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205711r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000470</xccdf:version>
+          <xccdf:title>18.9.97.1.1 (L1) Ensure 'Allow Basic authentication' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Basic authentication uses plain-text passwords that could be used to compromise a system. Disabling Basic authentication will reduce this potential.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93503</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103589</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000877</xccdf:ident>
+          <xccdf:fixtext fixref="F-5976r355052_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Client &gt;&gt; "Allow Basic authentication" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5976r355052_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2088" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205712">
+        <xccdf:title>SRG-OS-000125-GPOS-00065</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205712r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000490</xccdf:version>
+          <xccdf:title>18.9.97.1.3 (L1) Ensure 'Disallow Digest authentication' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Digest authentication is not as strong as other options and may be subject to man-in-the-middle attacks. Disallowing Digest authentication will reduce this potential.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103591</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93505</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000877</xccdf:ident>
+          <xccdf:fixtext fixref="F-5977r355055_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Client &gt;&gt; "Disallow Digest authentication" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5977r355055_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2090" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205816">
+        <xccdf:title>SRG-OS-000393-GPOS-00173</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205816r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000480</xccdf:version>
+          <xccdf:title>18.9.97.1.2 (L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Unencrypted remote access to a system can allow sensitive information to be compromised. Windows remote management connections must be encrypted to prevent this.
+
+Satisfies: SRG-OS-000393-GPOS-00173, SRG-OS-000394-GPOS-00174&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103585</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93499</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002890</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-003123</xccdf:ident>
+          <xccdf:fixtext fixref="F-6081r355811_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Client &gt;&gt; "Allow unencrypted traffic" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6081r355811_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-export value-id="xccdf_mil.disa.stig_value_winrm_client_allow_unencrypted_traffic_var" export-name="oval:mil.disa.stig.windows:var:112400" />
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2089" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205713">
+        <xccdf:title>SRG-OS-000125-GPOS-00065</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205713r569188_rule" weight="10.0" severity="high">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000500</xccdf:version>
+          <xccdf:title>18.9.97.2.1 (L1) Ensure 'Allow Basic authentication' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Basic authentication uses plain-text passwords that could be used to compromise a system. Disabling Basic authentication will reduce this potential.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93507</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103593</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-000877</xccdf:ident>
+          <xccdf:fixtext fixref="F-5978r355058_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Service &gt;&gt; "Allow Basic authentication" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-5978r355058_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2091" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205817">
+        <xccdf:title>SRG-OS-000393-GPOS-00173</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205817r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000510</xccdf:version>
+          <xccdf:title>18.9.97.2.3 (L1) Ensure 'Allow unencrypted traffic' is set to 'Disabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Unencrypted remote access to a system can allow sensitive information to be compromised. Windows remote management connections must be encrypted to prevent this.
+
+Satisfies: SRG-OS-000393-GPOS-00173, SRG-OS-000394-GPOS-00174&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103587</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93501</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002890</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-003123</xccdf:ident>
+          <xccdf:fixtext fixref="F-6082r355814_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Service &gt;&gt; "Allow unencrypted traffic" to "Disabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6082r355814_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2092" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205810">
+        <xccdf:title>SRG-OS-000373-GPOS-00157</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-205810r569188_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CC-000520</xccdf:version>
+          <xccdf:title>18.9.97.2.4 (L1) Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Storage of administrative credentials could allow unauthorized access. Disallowing the storage of RunAs credentials for Windows Remote Management will prevent them from being used with plug-ins.
+
+Satisfies: SRG-OS-000373-GPOS-00157, SRG-OS-000373-GPOS-00156&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-103515</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">V-93429</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-002038</xccdf:ident>
+          <xccdf:fixtext fixref="F-6075r355793_fix">Configure the policy value for Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Windows Components &gt;&gt; Windows Remote Management (WinRM) &gt;&gt; WinRM Service &gt;&gt; "Disallow WinRM from storing RunAs credentials" to "Enabled".</xccdf:fixtext>
+          <xccdf:fix id="F-6075r355793_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:mil.disa.stig.windows:def:2093" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
+
+
+
+
+
+
+
+
 
 
 
