@@ -1703,9 +1703,34 @@ Accounts with the "Restore files and directories" user right can circumvent file
         </xccdf:Rule>
       </xccdf:Group>
 
+      <xccdf:Group id="xccdf_mil.disa.stig_group_V-205767">
+        <xccdf:title>WN19-CIS_v1.0.1_2.2.46</xccdf:title>
+        <xccdf:description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</xccdf:description>
+        <xccdf:Rule id="xccdf_mil.disa.stig_rule_SV-900007r900007_rule" weight="10.0" severity="medium">
+          <xccdf:version update="http://iase.disa.mil/stigs">WN19-CIS_v1.0.1_2.2.46</xccdf:version>
+          <xccdf:title>(L1) Ensure 'Shut down the system' is set to 'Administrators' (Automated)</xccdf:title>
+          <xccdf:description>&lt;VulnDiscussion&gt;Inappropriate granting of user rights can provide system, administrative, and other high-level capabilities.
 
+Accounts with the "Shut down the system" user right can circumvent file and directory permissions and could allow access to sensitive data. It could also be used to overwrite more current data.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</xccdf:description>
+          <xccdf:reference>
+            <dc:title>DPMS Target Microsoft Windows Server 2019</dc:title>
+            <dc:publisher>DISA</dc:publisher>
+            <dc:type>DPMS Target</dc:type>
+            <dc:subject>Microsoft Windows Server 2019</dc:subject>
+            <dc:identifier>2907</dc:identifier>
+          </xccdf:reference>
+          <xccdf:ident system="http://cyber.mil/legacy">V-XXXXX</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/legacy">SV-XXXXXX</xccdf:ident>
+          <xccdf:ident system="http://cyber.mil/cci">CCI-XXXXXX</xccdf:ident>
+          <xccdf:fixtext fixref="F-6032r355220_fix">Configure the policy value for Computer Configuration &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies &gt;&gt; User Rights Assignment &gt;&gt; "Shut down the system" to include only the following accounts or groups:
 
-
+- Administrators</xccdf:fixtext>
+          <xccdf:fix id="F-9007r900007_fix" />
+          <xccdf:check system="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+            <xccdf:check-content-ref name="oval:o4kw.test.windows:def:9006" href="U_MS_Windows_Server_2019_V2R2_STIG_SCAP_1-2_Benchmark-oval.xml" />
+          </xccdf:check>
+        </xccdf:Rule>
+      </xccdf:Group>
 
       <xccdf:Group id="xccdf_mil.disa.stig_group_V-205768">
         <xccdf:title>WN19-CIS_v1.0.1_2.2.48</xccdf:title>
@@ -10588,6 +10613,21 @@ Incorrect configurations could prevent services from starting and result in a de
           </criteria>
         </definition>
 
+        <definition id="oval:o4kw.test.windows:def:9007" version="1" class="compliance">
+          <metadata>
+            <title>WN19-UR-900007</title>
+            <affected family="windows">
+              <platform>Microsoft Windows Server 2019</platform>
+            </affected>
+            <reference source="DISA" ref_id="90007" ref_url="http://iase.disa.mil/stigs/SRR/index.html" />
+            <reference ref_url="http://cce.mitre.org" source="CCE" ref_id="CCE--3" />
+            <description></description>
+          </metadata>
+          <criteria operator="AND">
+            <criterion test_ref="oval:mil.disa.stig.windows:tst:900007" comment="Shut down the system - Administrators" />
+          </criteria>
+        </definition>
+
 
 
 
@@ -11809,6 +11849,12 @@ Incorrect configurations could prevent services from starting and result in a de
           <object object_ref="oval:mil.disa.stig.windows:obj:9000060" />
           <state state_ref="oval:mil.disa.stig.windows:ste:9000060" />
         </accesstoken_test>
+
+        <accesstoken_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:tst:900007" version="1" check="all" comment="Shut down the system - Administrators">
+          <object object_ref="oval:mil.disa.stig.windows:obj:9000070" />
+          <state state_ref="oval:mil.disa.stig.windows:ste:9000070" />
+        </accesstoken_test>
+
 
 
 
@@ -13133,6 +13179,14 @@ Incorrect configurations could prevent services from starting and result in a de
           </set>
         </accesstoken_object>
 
+        <accesstoken_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:obj:9000070" version="1" comment="Filter for LOCAL SERVICE, NETWORK SERVICE">
+          <set xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" set_operator="UNION">
+            <object_reference>oval:mil.disa.stig.windows:obj:900001</object_reference>
+            <filter>oval:mil.disa.stig.windows:ste:9000011</filter>
+          </set>
+        </accesstoken_object>
+
+
 
 
 
@@ -14266,6 +14320,9 @@ Incorrect configurations could prevent services from starting and result in a de
           <seassignprimarytokenprivilege datatype="boolean" operation="equals">0</seassignprimarytokenprivilege>
         </accesstoken_state>
 
+        <accesstoken_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.windows:ste:9000070" version="1" comment="Replace a process level token">
+          <seshutdownprivilege datatype="boolean" operation="equals">0</seshutdownprivilege>
+        </accesstoken_state>
 
 
 
